@@ -1,0 +1,27 @@
+{
+    "name": "track-agent",
+    "version": "0.1.1",
+    "type": "module",
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "import": "./dist/index.js",
+            "types": "./dist/index.d.ts"
+        }
+    },
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "tsc",
+        "prepublishOnly": "npm run build"
+    },
+    "peerDependencies": {
+        "hono": "^4.0.0"
+    },
+    "devDependencies": {
+        "hono": "^4.0.0",
+        "typescript": "^5.0.0"
+    }
+}

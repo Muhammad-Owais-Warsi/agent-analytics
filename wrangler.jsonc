@@ -1,0 +1,41 @@
+{
+    "$schema": "node_modules/wrangler/config-schema.json",
+    "name": "analytics",
+    "main": "src/worker.ts",
+    "compatibility_date": "2026-06-27",
+    "observability": {
+        "enabled": true,
+    },
+    // "compatibility_flags": [
+    //   "nodejs_compat"
+    // ],
+    "vars": {
+        "ANALYTICS_WORKER_URL": "http://localhost:8787",
+    },
+    // "kv_namespaces": [
+    //   {
+    //     "binding": "MY_KV_NAMESPACE",
+    //     "id": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+    //   }
+    // ],
+    // "r2_buckets": [
+    //   {
+    //     "binding": "MY_BUCKET",
+    //     "bucket_name": "my-bucket"
+    //   }
+    // ],
+    "d1_databases": [
+        {
+            "binding": "agent_analytics",
+            "database_name": "agent-analytics",
+            "database_id": "a3ef9179-9442-4b0b-8c2e-293244393384",
+        },
+    ],
+    // "ai": {
+    //   "binding": "AI"
+    // },
+    // "observability": {
+    //   "enabled": true,
+    //   "head_sampling_rate": 1
+    // }
+}
